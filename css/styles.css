@@ -3,14 +3,17 @@
     --main-font-family: 'Roboto', sans-serif, system-ui, -apple-system;
     --main-container-font-family: 'Roboto', sans-serif;
     --main-font-size: 1rem;
-    --main-h1-font-size: 2.1rem;
+    --main-h1-font-size: 2.2rem;
+    --main-h2-font-size: 3rem;
     --main-h3-font-size: 1.7rem;
     --main-p-font-size: 1.4rem;
     --main-letter-spacing: 0.5px;
 
     
     /* Colors */
-    --main-bg-color: #f4f4f4;
+    --main-black-color: #000;
+    --main-bg-color: #959595;
+    --main-section2-bg-color: #531de9;
     --main-header-bg-color: #793b00;
     --main-header-text-color: rgb(255, 255, 255);
     --main-text-orange-color: #ff9d00;
@@ -19,8 +22,26 @@
 
     /* Shadows */
     --main-header-box-shadow: 0 4px 14px rgb(0, 0, 0);
-    --main-logo-text-shadow: 2px 2px 2px black, 2px 2px 2px black,  2px 2px 2px black,  2px 2px 2px black, 0 0 7px rgb(255, 157, 0), 0 0 7px rgb(255, 157, 0), 0 0 7px rgb(255, 157, 0);
-    --main-text-shadow: 2px 2px 2px black, 2px 2px 2px black,  2px 2px 2px black;
+    --main-logo-text-shadow: 
+    2px 2px 2px black,
+    2px 2px 2px black,
+    2px 2px 2px black,
+    2px 2px 2px black,
+    0 0 7px rgb(255, 157, 0),
+    0 0 7px rgb(255, 157, 0),
+    0 0 7px rgb(255, 157, 0);
+    --main-text-shadow: 
+    2px 2px 2px black, 
+    2px 2px 2px black,  
+    2px 2px 2px black;
+    --main-text-shadow-h2: 
+    5px 4px 3px rgb(0, 0, 0),
+    5px 4px 3px rgb(1, 0, 0),
+    1px 1px .1em rgb(0, 4, 255),
+    -1px -1px .1em rgb(0, 4, 255),
+    0 0 0.27em rgb(0, 166, 255),
+    0 0 0.27em rgb(0, 166, 255);
+    
 
     /* Variables */
     --main-linear-gradient:linear-gradient(rgba(0, 0, 0, 0.57), rgba(0, 0, 0, 0.5));
@@ -30,10 +51,10 @@
 
     /* Borders */
     --main-border-radius: 0.25rem;
+    --main-max-width: 1200px;
+    --main-line-height: 1.5;
 
     --main-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    --main-line-height: 1.5;
-    --main-max-width: 1200px;
     --main-container-padding: 15px;
     --main-container-bg-color: #fff;
     --main-container-border: 1px solid #ccc;
@@ -62,6 +83,18 @@ body{
     letter-spacing: var(--main-letter-spacing);
     background-color: var(--main-bg-color);
     color: var(--main-text-color);
+}
+
+h1{
+    font-size: var(--main-h1-font-size);
+}
+
+h2{
+    font-size: var(--main-h2-font-size);
+}
+
+h3{
+    font-size: var(--main-h3-font-size);
 }
 
 a{
@@ -145,6 +178,7 @@ nav ul{
 /* Home Section ================================================================================================================================================> */
 
 #home{
+    min-height: 1140px;
     padding: 120px 10px 30px;
     background-image: var(--main-linear-gradient), url('../resources/section-1-background-img.jpg');
     background-size: cover;
@@ -153,7 +187,6 @@ nav ul{
 }
 
 #home h1{
-    font-size: var(--main-h1-font-size);
     text-align: center;
     margin-bottom: 15px;
 }
@@ -161,7 +194,7 @@ nav ul{
 #slogan{
     font-size: 1.2rem;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 90px;
     color: var(--main-text-orange-color);
     text-shadow: var(--main-text-shadow);
 }
@@ -177,7 +210,6 @@ nav ul{
 }
 
 .benifit-text h3{
-    font-size: var(--main-h3-font-size);
     color: var(--main-text-orange-color);
 }
 
@@ -185,3 +217,80 @@ nav ul{
     font-size: var(--main-p-font-size);
     text-shadow: var(--main-text-shadow);
 }
+
+/* Products Section
+================================================================================================================================================>  */
+
+#products{
+    padding: 120px 10px 30px;
+    background-color: var(--main-section2-bg-color);
+    color: var(--main-text-color);
+}
+
+#products h2{
+    margin-bottom: 15px;
+    text-shadow: var(--main-text-shadow-h2);
+}
+
+.card-item{
+    list-style: none;
+}
+
+.card-link{
+    width: 400px;
+    display: block;
+    background-color: var(--main-container-bg-color);
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: var(--main-logo-text-shadow);
+    transition: var(--main-transition);
+}
+
+.card-link:hover{
+    border: 2px solid var(--main-link-hover-color);
+}
+
+.card-image{
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.badge{
+    color: var(--main-link-hover-color);
+    padding: 8px 16px;
+    font-size: .95rem;
+    font-weight: 500;
+    margin: 16px 0 18px;
+    background: var(--main-bg-color);
+    width: fit-content;
+    border-radius: 50px;
+}
+
+.card-title{
+    font-size: 1.19rem;
+    color: var(--main-black-color);
+    font-weight: 600;
+}
+
+.card-button{
+    height: 35px;
+    width: 35px;
+    color: var(--main-link-hover-color);
+    border-radius: 50%;
+    margin: 30px 0 5px;
+    background: none;
+    cursor: pointer;
+    border: 2px solid var(--main-link-hover-color);
+    transform: rotate(-45deg);
+    transition: var(--main-transition);
+}
+
+.card-button:hover{
+    color: var(--main-container-bg-color);
+    background: var(--main-link-hover-color);
+}
+
