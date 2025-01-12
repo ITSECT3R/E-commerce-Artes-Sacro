@@ -3,14 +3,17 @@
     --main-font-family: 'Roboto', sans-serif, system-ui, -apple-system;
     --main-container-font-family: 'Roboto', sans-serif;
     --main-font-size: 1rem;
-    --main-h1-font-size: 2.1rem;
+    --main-h1-font-size: 2.2rem;
+    --main-h2-font-size: 3rem;
     --main-h3-font-size: 1.7rem;
     --main-p-font-size: 1.4rem;
     --main-letter-spacing: 0.5px;
 
     
     /* Colors */
-    --main-bg-color: #f4f4f4;
+    --main-black-color: #000;
+    --main-bg-color: #959595;
+    --main-section2-bg-color: #531de9;
     --main-header-bg-color: #793b00;
     --main-header-text-color: rgb(255, 255, 255);
     --main-text-orange-color: #ff9d00;
@@ -51,10 +54,10 @@
 
     /* Borders */
     --main-border-radius: 0.25rem;
+    --main-max-width: 1200px;
+    --main-line-height: 1.5;
 
     --main-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    --main-line-height: 1.5;
-    --main-max-width: 1200px;
     --main-container-padding: 15px;
     --main-container-bg-color: #fff;
     --main-container-border: 1px solid #ccc;
@@ -83,6 +86,18 @@ body{
     letter-spacing: var(--main-letter-spacing);
     background-color: var(--main-bg-color);
     color: var(--main-text-color);
+}
+
+h1{
+    font-size: var(--main-h1-font-size);
+}
+
+h2{
+    font-size: var(--main-h2-font-size);
+}
+
+h3{
+    font-size: var(--main-h3-font-size);
 }
 
 a{
@@ -166,6 +181,7 @@ nav ul{
 /* Home Section ================================================================================================================================================> */
 
 #home{
+    min-height: 1140px;
     padding: 120px 10px 30px;
     background-image: var(--main-linear-gradient), url('section-1-background-img.jpg');
     background-size: cover;
@@ -174,7 +190,6 @@ nav ul{
 }
 
 #home h1{
-    font-size: var(--main-h1-font-size);
     text-align: center;
     margin-bottom: 15px;
 }
@@ -182,7 +197,7 @@ nav ul{
 #slogan{
     font-size: 1.2rem;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 90px;
     color: var(--main-text-orange-color);
     text-shadow: var(--main-text-shadow);
 }
@@ -198,7 +213,6 @@ nav ul{
 }
 
 .benifit-text h3{
-    font-size: var(--main-h3-font-size);
     color: var(--main-text-orange-color);
 }
 
