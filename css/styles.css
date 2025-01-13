@@ -41,6 +41,9 @@
     -1px -1px .1em rgb(0, 4, 255),
     0 0 0.27em rgb(0, 166, 255),
     0 0 0.27em rgb(0, 166, 255);
+    --main-card-shadow: 
+    0 8px 14px rgba(0, 0, 0, 1),
+    6px 8px 14px rgba(0, 0, 0, 1);
     
 
     /* Variables */
@@ -232,19 +235,22 @@ nav ul{
     text-shadow: var(--main-text-shadow-h2);
 }
 
-.card-item{
-    list-style: none;
+.card-wrapper{
+    overflow: hidden;
+    margin: 0 4px;
+    padding: 10px 10px 50px;
+
 }
 
 .card-link{
-    width: 400px;
+    user-select: none;
     display: block;
     background-color: var(--main-container-bg-color);
     padding: 18px;
     border-radius: 12px;
     text-decoration: none;
     border: 2px solid transparent;
-    box-shadow: var(--main-logo-text-shadow);
+    box-shadow: var(--main-card-shadow) ;
     transition: var(--main-transition);
 }
 
@@ -252,9 +258,13 @@ nav ul{
     border: 2px solid var(--main-link-hover-color);
 }
 
+.card-link:active {
+    cursor: grabbing;
+}
+
 .card-image{
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 10/11;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -292,5 +302,16 @@ nav ul{
 .card-button:hover{
     color: var(--main-container-bg-color);
     background: var(--main-link-hover-color);
+}
+
+.swiper-pagination-bullet{
+    height: 13px;
+    width: 13px;
+    opacity: .5;
+    background: var(--main-link-hover-color);
+}
+
+.swiper-pagination-bullet-active{
+    opacity: 1;
 }
 
