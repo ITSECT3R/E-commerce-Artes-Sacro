@@ -315,3 +315,16 @@ nav ul{
     opacity: 1;
 }
 
+.swiper-button-prev::after{
+    position: relative;
+    left: -10px;
+    font-weight: bold;
+    color: var(--main-nav-hover-color);
+}
+
+.swiper-button-next::after{
+    position: relative;
+    right: -10px;
+    font-weight: bold;
+    color: var(--main-nav-hover-color);
+}
