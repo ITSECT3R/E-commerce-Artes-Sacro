@@ -13,11 +13,13 @@
     /* Colors */
     --main-black-color: #000;
     --main-bg-color: #959595;
-    --main-section2-bg-color: #531de9;
+    --main-section2-bg-color: #ff9d00;
     --main-header-bg-color: #793b00;
     --main-header-text-color: rgb(255, 255, 255);
     --main-text-orange-color: #ff9d00;
     --main-nav-hover-color: #ff9d00;
+    --main-arrow-hover-color: #ff3700;
+
     --main-text-color: #ffffff;
 
     /* Shadows */
@@ -315,3 +317,24 @@ nav ul{
     opacity: 1;
 }
 
+.swiper-button-prev::after{
+    position: relative;
+    left: -9px;
+    font-weight: bold;;
+    color: var(--main-header-bg-color);
+    text-shadow: var(--main-text-shadow);
+}
+
+.swiper-button-next::after{
+    position: relative;
+    right: -9px;
+    font-weight: bold;
+    color: var(--main-header-bg-color);
+    text-shadow: var(--main-text-shadow);
+    transition: var(--main-transition);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+    transform: scale(1.1);
+}
