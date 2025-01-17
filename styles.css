@@ -19,6 +19,7 @@
     --main-text-orange-color: #ff9d00;
     --main-nav-hover-color: #ff9d00;
     --main-arrow-hover-color: #ff3700;
+    --main-light-blue-color: #00a6ff;
 
     --main-text-color: #ffffff;
 
@@ -44,10 +45,14 @@
     0 0 0.27em rgb(0, 166, 255),
     0 0 0.27em rgb(0, 166, 255);
     --main-card-shadow: 
+    0 0 12px rgba(0, 0, 0, 1),
     0 8px 14px rgba(0, 0, 0, 1),
     6px 8px 14px rgba(0, 0, 0, 1);
+    --main-card-hover-shadow:
+    0 0 12px rgb(255, 255, 255),
+    0 8px 14px rgb(255, 255, 255),
+    6px 8px 14px rgb(255, 255, 255);
     
-
     /* Variables */
     --main-linear-gradient:linear-gradient(rgba(0, 0, 0, 0.57), rgba(0, 0, 0, 0.5));
     --main-transition: .2s ease-in-out;
@@ -257,7 +262,8 @@ nav ul{
 }
 
 .card-link:hover{
-    border: 2px solid var(--main-link-hover-color);
+    border: 3px solid var(--main-light-blue-color);
+    box-shadow: var(--main-card-hover-shadow);
 }
 
 .card-link:active {
@@ -272,12 +278,12 @@ nav ul{
 }
 
 .badge{
-    color: var(--main-link-hover-color);
+    color: var(--main-light-blue-color);
     padding: 8px 16px;
-    font-size: .95rem;
-    font-weight: 500;
+    font-size: .97rem;
+    font-weight: 700;
     margin: 16px 0 18px;
-    background: var(--main-bg-color);
+    background: var(--main-black-color);
     width: fit-content;
     border-radius: 50px;
 }
@@ -318,7 +324,7 @@ nav ul{
 }
 
 .swiper-button-prev::after{
-    position: relative;
+    position: absolute;
     left: -9px;
     font-weight: bold;;
     color: var(--main-header-bg-color);
@@ -326,12 +332,11 @@ nav ul{
 }
 
 .swiper-button-next::after{
-    position: relative;
+    position: absolute;
     right: -9px;
     font-weight: bold;
     color: var(--main-header-bg-color);
     text-shadow: var(--main-text-shadow);
-    transition: var(--main-transition);
 }
 
 .swiper-button-next:hover,
