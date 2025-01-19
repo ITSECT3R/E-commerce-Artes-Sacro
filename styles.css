@@ -20,6 +20,7 @@
     --main-nav-hover-color: #ff9d00;
     --main-arrow-hover-color: #ff3700;
     --main-light-blue-color: #00a6ff;
+    --main-light-gray-color: #f4f4f4;
 
     --main-text-color: #ffffff;
 
@@ -49,9 +50,9 @@
     0 8px 14px rgba(0, 0, 0, 1),
     6px 8px 14px rgba(0, 0, 0, 1);
     --main-card-hover-shadow:
-    0 0 12px rgb(255, 255, 255),
-    0 8px 14px rgb(255, 255, 255),
-    6px 8px 14px rgb(255, 255, 255);
+    0 0 7px rgb(255, 255, 255),
+    0 8px 10px rgb(255, 255, 255),
+    6px 8px 10px rgb(255, 255, 255);
     
     /* Variables */
     --main-linear-gradient:linear-gradient(rgba(0, 0, 0, 0.57), rgba(0, 0, 0, 0.5));
@@ -235,6 +236,7 @@ nav ul{
     padding: 120px 10px 30px;
     background-color: var(--main-section2-bg-color);
     color: var(--main-text-color);
+    height: auto;
 }
 
 #products h2{
@@ -242,17 +244,26 @@ nav ul{
     text-shadow: var(--main-text-shadow-h2);
 }
 
+.h3-section2{
+    margin-bottom: 15px;
+    text-shadow: var(--main-text-shadow-h2);
+    text-align: center;
+}
+
+.swiper{
+    margin-bottom: 30px;
+}
+
 .card-wrapper{
     overflow: hidden;
     margin: 0 4px;
     padding: 10px 10px 50px;
-
 }
 
 .card-link{
     user-select: none;
     display: block;
-    background-color: var(--main-container-bg-color);
+    background-color: var(--main-light-gray-color);
     padding: 18px;
     border-radius: 12px;
     text-decoration: none;
@@ -272,7 +283,7 @@ nav ul{
 
 .card-image{
     width: 100%;
-    aspect-ratio: 10/11;
+    aspect-ratio: 10/9;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -342,4 +353,20 @@ nav ul{
 .swiper-button-next:hover,
 .swiper-button-prev:hover{
     transform: scale(1.1);
+}
+
+/* About Section ================================================================================================================================================> */
+
+#about{
+    padding: 120px 10px 30px;
+    background-color: var(--main-container-bg-color);
+    color: var(--main-black-color);
+}
+
+
+/* Contact Section ================================================================================================================================================> */
+
+#contact{
+    padding: 120px 10px 30px;
+    color: var(--main-text-color);
 }
