@@ -15,6 +15,7 @@
     --main-bg-color: #959595;
     --main-section2-bg-color: #ff9d00;
     --main-contact-bg-color: #32159d;
+    --main-form-border-color: #6200ff;
     --main-header-bg-color: #793b00;
     --main-header-text-color: rgb(255, 255, 255);
     --main-text-orange-color: #ff9d00;
@@ -22,8 +23,9 @@
     --main-arrow-hover-color: #ff3700;
     --main-light-blue-color: #00a6ff;
     --main-light-gray-color: #f4f4f4;
-
+    --main-container-bg-color: #fff;
     --main-text-color: #ffffff;
+
 
     /* Shadows */
     --main-header-box-shadow: 0 4px 14px rgb(0, 0, 0);
@@ -54,6 +56,10 @@
     0 0 7px rgb(255, 255, 255),
     0 8px 10px rgb(255, 255, 255),
     6px 8px 10px rgb(255, 255, 255);
+    --main-form-text-shadow:
+    1px 1px 2px red,
+    0 0 2em blue,
+    0 0 0.4em rgb(0, 166, 255);
     
     /* Variables */
     --main-linear-gradient:linear-gradient(rgba(0, 0, 0, 0.57), rgba(0, 0, 0, 0.5));
@@ -65,19 +71,6 @@
     --main-border-radius: 0.25rem;
     --main-max-width: 1200px;
     --main-line-height: 1.5;
-
-    --main-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    --main-container-padding: 15px;
-    --main-container-bg-color: #fff;
-    --main-container-border: 1px solid #ccc;
-    --main-container-line-height: 1.5;
-    --main-container-letter-spacing: 0.5px;
-    --main-container-text-color: #333;
-    --main-container-link-color: #007bff;
-    --main-container-border-color: #ccc;
-    --main-container-border-radius: 0.25rem;
-    --main-container-max-width: 1300px;
-    --main-container-width: calc(100% - 30px);
 }
 
 *,
@@ -146,6 +139,17 @@ header{
     z-index: 1000;
 }
 
+#container-company-logo{
+    display: flex;
+    align-items: center;
+}
+
+#container-company-name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #company-name{
     font-size: 2.1rem;
     font-weight: bold;
@@ -201,6 +205,10 @@ nav ul{
 #home h1{
     text-align: center;
     margin-bottom: 15px;
+}
+
+.artes-sacro-style p{
+    font-size: 1.4rem;
 }
 
 #slogan{
@@ -378,7 +386,106 @@ nav ul{
     background-color: var(--main-contact-bg-color);
 }
 
+#contact h2{
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow: var(--main-logo-text-shadow);
+}
 
+#contact p{
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: var(--main-text-shadow);
+}
+
+.wrapper_form{
+    padding: 10px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto ;
+    margin-bottom: 50px;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(23, 23, 161);
+    box-shadow: var(--main-card-shadow);
+    border: solid 4px var(--main-form-border-color);
+    padding: 20px;
+    border-radius: 30px;
+    transition: .3s ease-in-out;
+}
+
+#form:hover{
+    border: #ff7300 solid 4px;
+
+}
+
+.input_form{
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 45px;
+    border: solid 3px var(--main-form-border-color);
+    border-radius: 20px;
+    font-size: 1.1rem;
+    padding: 10px;
+    background-color: #ffffff;
+    font-weight: 600;
+    transition: .3s ease-in-out;
+    
+}
+
+.input_form:hover{
+    border: solid 3px  #ff7300;
+}
+
+#phone{
+    width: 100%;
+    max-width: 300px;
+}
+
+#dropdown{
+    width: 100%;
+    max-width: 300px;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+#pc_details{
+    width: 100%;
+    max-width: 600px;
+    height: 200px;
+    font-size: 1.3rem;
+    
+}
+
+#submit{
+    width: 100%;
+    max-width: 400px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
+    text-shadow: var(--main-form-text-shadow);
+    background-color: #3300ff;
+    font-size: 1.5rem;
+    transition: .4s ease-in-out;
+}
+
+#submit:hover{
+    background-color: #6600ff;
+}
+
+form label{
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-shadow: var(--main-form-text-shadow);
+
+}
 
 /* Footer Section ================================================================================================================================================> */
 
