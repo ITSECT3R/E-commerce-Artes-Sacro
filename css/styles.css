@@ -196,6 +196,7 @@ nav ul{
 
 #home{
     min-height: 1140px;
+    height: auto;
     padding: 120px 10px 30px;
     background-image: var(--main-linear-gradient), url('../resources/section-1-background-img.jpg');
     background-size: cover;
